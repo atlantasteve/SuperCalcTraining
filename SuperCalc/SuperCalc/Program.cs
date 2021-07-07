@@ -10,17 +10,17 @@ namespace SuperCalc
         {
             while (true)
             {
-                Console.Write("Enter Basic Math: ");
+                Console.Write("Enter a Basic Arithmetic equation: ");
                 string input = Console.ReadLine();
                 if (input == string.Empty || input.Equals("exit", StringComparison.OrdinalIgnoreCase))
                     break;
-                var result = ParseInput(input);
+                var result = ParseAndCalculate(input);
                 Console.WriteLine(result);
             }
             Console.WriteLine("Goodbye");
         }
 
-        private static string ParseInput(string input)
+        private static string ParseAndCalculate(string input)
         {
             var operators = new List<string>() { "+", "-", "*", "x", "/", "^", "%" };
 
